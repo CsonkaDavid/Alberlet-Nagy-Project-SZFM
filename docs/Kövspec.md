@@ -59,6 +59,12 @@ A program bizonyos részegységeihez a következő funkciók tartoznak:
     - az adatbázisba elmentett mérések megjelenítése olvasható formában
 
     - vissza gomb - visszairányít a főmenübe
+    
+![](../media/funk_kov_abra.png)
+
+### Rendszerre vonatkozó törvények, szabványok, ajánlások
+
+
 
 ### Jelenlegi üzleti folyamatok
 
