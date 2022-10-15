@@ -64,3 +64,15 @@ erre pedig megoldást nyújt programunk, hiszen alkalmazásunkban egy gomb megny
 Ennek forrása egy adatbázis lesz, ahová egy mérés befejezte után az adatok kimentődnek. Miután pedig megnyomjuk az 'Előzmények' gombot, az adatbázisból kiolvasásra kerülnek
 a korábbi eredmények, és betöltődnek egy, a felhasználó számára jól olvasható formában.
 Ezzel megspórolhatunk néhány mérést arra az esetre, ha elfelejtenénk korábbi eredményünket.
+
+### Követelménylista
+
+Modul  | ID | Név           | v. | Kifejtés
+-------| --- |---------------| --- | ---
+Felület | K1 | Indítás       | 1.0 | Ennek a gombnak a segítségével lépünk be a mérési felületre.
+Felület | K2 | Előzmények    | 1.0 | Az előző mérések megjelenítésének felülete.
+Felület | K3 | Visszalépés   | 1.0 | A felhasználói felületekről való visszalépés az előző menübe.
+Felület | K4 | Mérés indítás | 1.0 | A mérést ezzel indítjuk el vagy állítjuk le.
+Felület | K5 | Mérési adat   | 1.0 | A lemért adat megjelenítése.
+Statisztika | K6 | Lemért adatok | 1.0 | A mért adatok megjelenítése.
+Funkció | K7 | Mérés         | 1.0 | A telefonos gyroscope és a gyorsulás szenzor segítségével távolságmérés.
