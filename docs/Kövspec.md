@@ -35,3 +35,18 @@ Az alkalmazás képes kell legyen a következő műveletek elvégzésére:
 + Mért adatok tárolása erre előkészített adatbázis rendszerben
 
 + Mérési előzmények megjelenítése külön alkalmazás menüben
+
+### Jelenlegi üzleti folyamatok
+
+A mai világban műszaki és otthoni környezetben is szükségünk lehet mérőeszközökre. A rendelkezésre álló eszközök most többnyire a mérőszalagok
+vagy a jól ismert colostok illetve digitális távolságmérők. Ezek az eszközök megbízhatóak és többnyire a legtöbb háztartásban megtalálhatóak,
+azonban bármikor kerülhetünk olyan helyzetbe, hogy mégsincsenek kéznél, de mégis mérési műveletek végzésére van szükség. A legtöbb ember
+ilyen helyzetekben illetve a mindennapi élet folyamán nem tart magánál mindig ilyen mérésre alkalmas eszközöket. Továbbá a legtöbb "kézi" 
+mérőeszköz nem képes adattárolásra mint a különböző elektronikus megoldásuk bármelyike, ami azt eredményezi, hogy akár többszöri alkalommal
+is le kell mérnünk újra és újra ugyanazokat a távolságokat szükségletektől függően. Ilyen szituációk lehetnek például különböző asztali díszek
+vagy kiegészítők megfelelő méretben való vásárlása esetén történő mérések. Az ilyen szituációkban az eltárolt adatok megspórolhatnák egy-egy
+mérés idejét.
+
+Telefonjaink a fentebb említett eszközökkel ellentétben általában mindig nálunk vannak és egyszerre többféle hasznos funkcionalitással is rendelkeznek
+amelyek elérhetőek mobil applikációkon keresztül. Egy ilyen plusz funckió a fent említett problémákat megoldaná egy egyszerűen használható, 
+adatok tárolására is képes applikációval.
