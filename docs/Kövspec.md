@@ -36,6 +36,30 @@ Az alkalmazás képes kell legyen a következő műveletek elvégzésére:
 
 + Mérési előzmények megjelenítése külön alkalmazás menüben
 
+### Funkcionális követelmények
+
+A program bizonyos részegységeihez a következő funkciók tartoznak:
+
+ 1. Főmenü:
+
+    - indítás gomb - a mérési felületre irányít át
+    
+    - előzmények gomb - az előzmények felületre irányít át
+    
+ 2. Mérési felület:
+    
+    - mérés elindítása és leállítása
+
+    - a mérések automatikus elmentése az adatbázisba
+
+    - vissza gomb - visszairányít a főmenübe
+
+ 3. Előzmények felület:
+
+    - az adatbázisba elmentett mérések megjelenítése olvasható formában
+
+    - vissza gomb - visszairányít a főmenübe
+
 ### Jelenlegi üzleti folyamatok
 
 A mai világban műszaki és otthoni környezetben is szükségünk lehet mérőeszközökre. A rendelkezésre álló eszközök most többnyire a mérőszalagok
@@ -67,12 +91,12 @@ Ezzel megspórolhatunk néhány mérést arra az esetre, ha elfelejtenénk korá
 
 ### Követelménylista
 
-Modul  | ID | Név           | v. | Kifejtés
--------| --- |---------------| --- | ---
-Felület | K1 | Indítás       | 1.0 | Ennek a gombnak a segítségével lépünk be a mérési felületre.
-Felület | K2 | Előzmények    | 1.0 | Az előző mérések megjelenítésének felülete.
-Felület | K3 | Visszalépés   | 1.0 | A felhasználói felületekről való visszalépés az előző menübe.
-Felület | K4 | Mérés indítás | 1.0 | A mérést ezzel indítjuk el vagy állítjuk le.
-Felület | K5 | Mérési adat   | 1.0 | A lemért adat megjelenítése.
-Statisztika | K6 | Lemért adatok | 1.0 | A mért adatok megjelenítése.
-Funkció | K7 | Mérés         | 1.0 | A telefonos gyroscope és a gyorsulás szenzor segítségével távolságmérés.
+| Modul       | ID  | Név           | v.  | Kifejtés                                                                 |
+|-------------|-----|---------------|-----|--------------------------------------------------------------------------|
+| Felület     | K1  | Indítás       | 1.0 | Ennek a gombnak a segítségével lépünk be a mérési felületre.             |
+| Felület     | K2  | Előzmények    | 1.0 | Az előző mérések megjelenítésének felülete.                              |
+| Felület     | K3  | Visszalépés   | 1.0 | A felhasználói felületekről való visszalépés az előző menübe.            |
+| Felület     | K4  | Mérés indítás | 1.0 | A mérést ezzel indítjuk el vagy állítjuk le.                             |
+| Felület     | K5  | Mérési adat   | 1.0 | A lemért adat megjelenítése.                                             |
+| Statisztika | K6  | Lemért adatok | 1.0 | A mért adatok megjelenítése.                                             |
+| Funkció     | K7  | Mérés         | 1.0 | A telefonos gyroscope és a gyorsulás szenzor segítségével távolságmérés. |
