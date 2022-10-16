@@ -64,6 +64,7 @@ tart magánál mindig ilyen mérésre alkalmas eszközöket. Továbbá a legtöb
 adattárolásra mint a különböző elektronikus megoldásuk bármelyike, ami azt eredményezi, hogy akár
 többszöri alkalommal is le kell mérnünk újra és újra ugyanazokat a távolságokat szükségletektől
 függően. Ilyen szituációk lehetnek például különböző asztali díszek vagy kiegészítők megfelelő 
+függően. Ilyen szituációk lehetnek például különböző asztali díszek vagy kiegészítők megfelelő 
 méretben való vásárlása esetén történő mérések. Az ilyen szituációkban az eltárolt adatok
 megspórolhatnák egy-egy mérés idejét.
 
@@ -138,6 +139,27 @@ Az előzmények felületen jelennek meg a mért értékek.
      + visszairányít a főmenübe
 
 ![](../media/funk_kov_abra.png)
+
+### Képernyőterv
+
+![](../media/fomenu.png)
+
+A program főmenüjén 3 gomb található, melyekkel a többi felületetre tudunk navigálni.
+
+A Kilépés gombbal értelemszerűen ki tudunk lépni az alkalmazásból.
+
+![](../media/elozmenyek.png)
+
+Az előzmények felületen meg tudjuk tekinteni korábbi méréseink eredményét.
+
+Az előzmények listaszerűen, a felhasználó számára olvasható formában jelennek meg a képernyőn.
+
+![](../media/meresmenu.png)
+
+A mérési felület közepén található egy nagy gomb, ennek megnyomásával tudjuk elindítani a mérési
+folyamatot, valamint ismételt megnyomásával leállítani azt.
+
+A felület alján a megjelenik a legutóbbi mérés eredménye.
 
 ### Használati esetek
 
