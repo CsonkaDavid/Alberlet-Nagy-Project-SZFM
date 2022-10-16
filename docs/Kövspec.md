@@ -19,14 +19,15 @@ nem tartunk magunknál mérésre alkalmas eszközt. Telefonunk azonban mindig n�
 
 ### Vágyálom rendszer
 
-A projekt célja, hogy létrehozzunk egy olyan alkalmazást mely képes minden irányban pontos távolságot mérni kezdő- és végpont
-között.
+A projekt célja, hogy létrehozzunk egy olyan alkalmazást mely képes minden irányban pontos 
+távolságot mérni kezdő- és végpont között.
 
 Az alkalmazás képes kell legyen a következő műveletek elvégzésére:
 
 + Mérési kezdőpont kijelölése felhasználói bemenetre
 
-+ Mérési végpont megállapítása felhasználói bemenetre vagy gyroscope és gyorsulásmérő által érzékelt minimum sebesség és elmozdulás alatti paraméterek érzékelése esetén
++ Mérési végpont megállapítása felhasználói bemenetre vagy gyroscope és gyorsulásmérő által érzékelt
+minimum sebesség és elmozdulás alatti paraméterek érzékelése esetén
 
 + Mérési végpont és kezdőpont közötti pontos távolság megállapítása
 
