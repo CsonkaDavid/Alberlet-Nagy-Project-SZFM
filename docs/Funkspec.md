@@ -122,3 +122,27 @@ Az előzmények felületen jelennek meg a mért értékek.
      + visszairányít a főmenübe
 
 ![](../media/funk_kov_abra.png)
+
+### Használati esetek
+
+A program kezelését egyetlen felhasználó végzi. A hagyományos mérőeszközökkel történő mérésekhez 
+hasonlóan itt sincs szükség egynél további felhasználó beavatkozására. Ő végzi az összes lehetséges 
+cselekvést az alkalmazásban.
+
+A program három felülettel rendelkezik, mindegyikben más-más dolgokat tud csinálni a felhasználó.
+
+A főmenüben 3 gomb közül tud választani a felhasználó, melyek megnyomásával különböző dolgokat hajt 
+végre. 
+
+Az 'Indítás' gombbal átirányítódik arra a felületre, ahol a mérést tudjuk végezni. 
+
+Az 'Előzmények' gomb megnyomásával arra a felületre jutunk, ahol meg tudjuk tekinteni korábbi méréseink
+eredményét.
+
+A 'Kilépés' gomb használatával pedig be tudjuk zárni a programot.
+
+A mérési menüben a középen található indítógomb megnyomásával tudjuk elindítani mérésünket, valamint
+leállítani, ha lemértük a kívánt távot.
+
+Az előzményeket tartalmazó felületen végig tudjuk nézni korábbi mérésadatainkat, végig tudunk 
+görgetni köztük.
