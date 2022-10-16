@@ -76,3 +76,49 @@ erre pedig megoldást nyújt programunk, hiszen alkalmazásunkban egy gomb megny
 Ennek forrása egy adatbázis lesz, ahová egy mérés befejezte után az adatok kimentődnek. Miután pedig megnyomjuk az 'Előzmények' gombot, az adatbázisból kiolvasásra kerülnek
 a korábbi eredmények, és betöltődnek egy, a felhasználó számára jól olvasható formában.
 Ezzel megspórolhatunk néhány mérést arra az esetre, ha elfelejtenénk korábbi eredményünket.
+
+### Funkció - követelmény megfeleltetés
+
+1. Főmenü:
+
+Itt találjuk meg az elindítás és az előzmények gombot.
+
+   - indítás gomb:
+     
+      + a mérési felületre irányít át
+
+   - előzmények gomb:
+   
+     + az előzmények felületre irányít át
+
+2. Mérési felület:
+
+Ezen a felületen történik meg a mérés.
+
+   - mérés gomb:
+     
+     + mérés elindítása
+     
+     + mérés leállítása
+
+   - a mérések automatikus elmentése az adatbázisba:
+
+     + az adatbázisba JDBC kapcsolódáson keresztül 
+
+   - vissza gomb:
+   
+     + visszairányít a főmenübe
+
+3. Előzmények felület:
+
+Az előzmények felületen jelennek meg a mért értékek.
+
+   - az adatbázisba elmentett mérések megjelenítése olvasható formában:
+   
+     + az adatbázisból JDBC kapcsolódása keresztül
+
+   - vissza gomb:
+   
+     + visszairányít a főmenübe
+
+![](../media/funk_kov_abra.png)
