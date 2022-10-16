@@ -64,7 +64,9 @@ A program bizonyos részegységeihez a következő funkciók tartoznak:
 
 ### Rendszerre vonatkozó törvények, szabványok, ajánlások
 
+    - Adatbázis - JDBC - 3NF
 
+    - User Interface Standards
 
 ### Jelenlegi üzleti folyamatok
 
