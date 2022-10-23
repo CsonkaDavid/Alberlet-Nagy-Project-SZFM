@@ -45,7 +45,7 @@ arra az esetre, ha elfelejtenénk korábbi eredményünket.
 
 ### Üzleti folyamatok modellje
 
-
+![](../media/felh_feladatok_abra.png)
 
 ### Funkcionális terv
 
