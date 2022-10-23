@@ -45,6 +45,8 @@ arra az esetre, ha elfelejtenénk korábbi eredményünket.
 
 ### Üzleti folyamatok modellje
 
+
+
 ### Funkcionális terv
 
 A program kezelését egyetlen felhasználó végzi. A hagyományos mérőeszközökkel történő mérésekhez
