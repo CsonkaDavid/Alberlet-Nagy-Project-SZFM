@@ -81,6 +81,38 @@ görgetni köztük.
 
 ### Tesztelési terv
 
+A tesztelésünk célja, hogy meggyőződjünk róla, hogy az alkalmazásunk komponensei, valamint az
+alkalmazás egésze úgy működik-e, mint kellene. Ezen felül leellenőrizzük, hogy nincsenek-e a
+programban hibák, bugok, amik tönkretennék a játékélményt. Meggyőződünk róla, hogy a felhasználói
+felület elemei a nekik beállított funkciókat megfelelően látják-e el, illetve a különböző szabványú
+kijelzőkön hasonló arányban helyezkednek-e el.
+
+Tesztelési folyamatunk lépései:
+1. Egységteszt
+
+- Egységtesztünkben ellenőrizzük le, hogy a programunkat alkotó metódusok külön-külön megfelelően 
+funkcionálnak-e, a különbőző bemenetekre az elvárt kimeneteket produkálják.
+
+- Biztosítjuk, hogy tesztjeink a program kódjának minél nagyobb részét lefedjék.
+
+- Akkor nevezhetőek sikeresnek tesztjeink, ha minden lehetséges bemenetre az elvárt kimenetet 
+produkálják.
+
+- Akkor megfelelő az egységtesztünk, ha a kódot a lehető legnagyobb részben lefedi.
+
+2. Funkcionális teszt
+
+- A funkcionális tesztek cégünk fejlesztői által lesznek elvégezve.
+
+- Funkcionális tesztünkben minél többféle futtatókörnyezetben (pl.: különböző telefonokon, Android 
+verziókon) teszteljük a játékélményt.
+
+- Megnézzük, hogy a mérési folyamat zökkenőmentesen zajlik-e, bugoktól, funkcionális hibáktól
+mentes -e.
+
+- Akkor sikeres tesztünk, ha minden tesztelt környezetben hibamentesen lefutott a program, nem 
+történt rendellenes működés.
+
 ### Telepítési terv
 
 A játék Android platformra telepíthető
