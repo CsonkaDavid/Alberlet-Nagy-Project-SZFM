@@ -32,4 +32,14 @@
 
 ### Telepítési terv
 
-### Karbantartási terv
+A játék Android platformra telepíthető
+
+- Az alkalmazás nem Google Play-en keresztül elérhető.
+
+- Elérés módja: Az alkalmazás Github tárolóján keresztül letölthető
+
+- Beállításokban a telepítéshez engedélyezni kell a 3. féltől származó tartalmakat
+
+- Telepítéshez a letöltött ".apk" állományt kell futtatni
+
+## Karbantartási terv
