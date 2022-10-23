@@ -43,3 +43,13 @@ A játék Android platformra telepíthető
 - Telepítéshez a letöltött ".apk" állományt kell futtatni
 
 ## Karbantartási terv
+
+- Fix időszakonként ellenőrizni fogjuk hogy a játék egyes funkciói megfelelően működnek-e,
+  ellátják-e szükséges feladataikat, nem történik-e váratlan hiba
+
+- Ellenőrizzük, hogy jövőben kiadott Android verziókkal kompatibilis legyen
+
+- Új képernyő méret szabványok megjelenése esetén a felhasználói felület elemeire vonatkozóan
+  biztosítjuk a rezponzivítást
+
+- A keletkező hibákat, bugokat a lehető leghamarabb próbáljuk kijavítani
