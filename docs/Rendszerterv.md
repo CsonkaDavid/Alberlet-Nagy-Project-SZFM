@@ -20,6 +20,14 @@
 
 ### Fizikai környezet
 
+* Az alkalmazás android rendszerre fog készülni
+
+* Fejlesztői eszközök:
+
+    * Android Studio
+
+    * Maven
+
 ### Tesztelési terv
 
 ### Telepítési terv
