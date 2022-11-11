@@ -15,6 +15,13 @@ public class MeasurementSensorManager implements SensorEventListener {
                 accelerometer,
                 SensorManager.SENSOR_DELAY_FASTEST,
                 SensorManager.SENSOR_DELAY_FASTEST);
+
+        Sensor gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        sensorManager.registerListener(
+                this,
+                gyroscope,
+                SensorManager.SENSOR_DELAY_FASTEST,
+                SensorManager.SENSOR_DELAY_FASTEST);
     }
 
     @Override
@@ -22,6 +29,10 @@ public class MeasurementSensorManager implements SensorEventListener {
         if(event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             double sides = event.values[0];
             double upDown = event.values[1];
+        }
+
+        if(event.sensor.getType() == Sensor.TYPE_GYROSCOPE) {
+
         }
     }
 
