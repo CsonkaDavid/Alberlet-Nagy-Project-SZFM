@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0DABFF"
-    tools:context=".MainActivity">
+    tools:context=".gui.MainActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_start"
             android:layout_marginBottom="60dp"
 
             android:layout_width="360dp"
@@ -30,13 +30,13 @@
             />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_database"
 
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:padding="20dp"
-            android:text="előzmények"
+            android:text="adatbázis"
             android:textSize="40sp"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -45,7 +45,7 @@
             />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_quit"
             android:layout_marginTop="60dp"
 
             android:layout_width="360dp"
