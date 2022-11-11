@@ -16,7 +16,7 @@
         <Button
             android:id="@+id/button_start"
             android:layout_marginBottom="60dp"
-
+            android:onClick="onStartButtonClick"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -31,7 +31,7 @@
 
         <Button
             android:id="@+id/button_database"
-
+            android:onClick="onDatabaseButtonClick"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -47,7 +47,7 @@
         <Button
             android:id="@+id/button_quit"
             android:layout_marginTop="60dp"
-
+            android:onClick="onQuitButtonClick"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"

@@ -16,4 +16,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
+    public void onStartButtonClick(View view) {
+        Intent intent = new Intent(this, MeasurementActivity.class);
+        startActivity(intent);
+    }
+
+    public void onDatabaseButtonClick(View view) {
+        Intent intent = new Intent(this, DatabaseActivity.class);
+        startActivity(intent);
+    }
+
+    public void onQuitButtonClick(View view) {
+        finish();
+        System.exit(0);
+    }
 }
