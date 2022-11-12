@@ -13,7 +13,7 @@ public class MeasurementDatabase {
 
     public MeasurementDatabase(Activity activity) {
         database = Room.databaseBuilder(activity.getApplicationContext(),
-                AppDatabase.class, "").build();
+                AppDatabase.class, "MeasurementDatabase").build();
     }
 
     private List<Measurement> getMeasurements() {
