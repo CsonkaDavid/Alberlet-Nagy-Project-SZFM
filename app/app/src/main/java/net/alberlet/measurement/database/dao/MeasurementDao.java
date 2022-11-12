@@ -1,8 +1,10 @@
-package net.alberlet.measurement.database;
+package net.alberlet.measurement.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import net.alberlet.measurement.database.entity.Measurement;
 
 import java.util.List;
 
@@ -10,7 +12,7 @@ import java.util.List;
 public interface MeasurementDao {
     @Query("SELECT * from measurement")
     List<Measurement> getAllMeasurements();
-    
+
     @Insert
     void insertNewMeasurement(Measurement measurement);
 }

@@ -1,4 +1,4 @@
-package net.alberlet.measurement.database;
+package net.alberlet.measurement.database.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -9,9 +9,16 @@ public class Measurement {
     @PrimaryKey
     public int id;
 
+    public Measurement() {}
+
+    public Measurement(String date, double meter) {
+        this.date = date;
+        this.meter = meter;
+    }
+
     @ColumnInfo(name = "date")
     public String date;
 
     @ColumnInfo(name = "meter")
-    public String meter;
+    public double meter;
 }
