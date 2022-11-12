@@ -38,7 +38,7 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        return;
+
     }
 
     public void setSensorManager(SensorManager sensorManager) {
