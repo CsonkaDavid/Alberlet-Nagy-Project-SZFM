@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#0DABFF"
     tools:context=".gui.MainActivity">
 
@@ -11,12 +11,15 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
 
-        <Button
-            android:id="@+id/button_start"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_measurement"
             android:layout_marginBottom="60dp"
-            android:onClick="onStartButtonClick"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -27,11 +30,11 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textAllCaps="true"
+            android:onClick="onClick"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_database"
-            android:onClick="onDatabaseButtonClick"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -42,12 +45,12 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textAllCaps="true"
+            android:onClick="onClick"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_quit"
             android:layout_marginTop="60dp"
-            android:onClick="onQuitButtonClick"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -58,6 +61,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textAllCaps="true"
+            android:onClick="onClick"
             />
     </LinearLayout>
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
