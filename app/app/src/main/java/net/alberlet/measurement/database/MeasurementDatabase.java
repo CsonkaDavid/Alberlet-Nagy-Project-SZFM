@@ -16,11 +16,11 @@ public class MeasurementDatabase {
                 AppDatabase.class, "MeasurementDatabase").build();
     }
 
-    private List<Measurement> getMeasurements() {
+    public List<Measurement> getMeasurements() {
         return database.measurementDao().getAllMeasurements();
     }
 
-    private void insertMeasurement(String date, double meters) {
+    public void insertMeasurement(String date, double meters) {
         Measurement measurement = new Measurement(date, meters);
 
         database.measurementDao().insertNewMeasurement(measurement);
