@@ -43,6 +43,8 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
     private void startMeasuring() {
         isMeasuring = true;
         sensorManager.registerListeners();
+        measurementButton.setText("Leállítás");
+        measurementButton.setBackgroundResource(R.drawable.measurement_stop_button_background);
     }
 
     private void stopMeasuring() {
