@@ -50,6 +50,8 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
     private void stopMeasuring() {
         isMeasuring = false;
         sensorManager.unregisterListeners();
+        measurementButton.setText("Indítás");
+        measurementButton.setBackgroundResource(R.drawable.measurement_button_background);
     }
 
 }
