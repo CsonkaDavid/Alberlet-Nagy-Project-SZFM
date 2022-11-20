@@ -8,24 +8,24 @@
     tools:context=".gui.MainActivity">
 
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="- cm"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="65dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-           />
+    <TextView
+        android:id="@+id/text_view_measurement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- cm"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="65dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/button_toggle_measurement"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/measurement_button_background"
@@ -38,6 +38,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_measurement"
         app:layout_constraintVertical_bias="0.501" />
 </androidx.constraintlayout.widget.ConstraintLayout>
