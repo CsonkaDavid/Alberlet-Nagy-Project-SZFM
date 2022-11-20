@@ -25,13 +25,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
-            style="@style/TextViewStyle"
+            android:id="@+id/textViewasd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="Dátum" />
 
         <TextView
-            android:id="@+id/textView2"
-            style="@style/TextViewStyle"
+            android:id="@+id/textView2asd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="Távolság" />
     </LinearLayout>
 
