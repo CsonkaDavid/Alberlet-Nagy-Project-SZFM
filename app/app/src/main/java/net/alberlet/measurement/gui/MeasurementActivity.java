@@ -46,7 +46,8 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void stopMeasuring() {
-
+        isMeasuring = false;
+        sensorManager.unregisterListeners();
     }
 
 }
