@@ -5,6 +5,9 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MeasurementSensorManager implements SensorEventListener {
     private SensorManager sensorManager;
 
@@ -12,10 +15,11 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     private final Sensor gyroscope;
 
+    private final List<Dimensions> values;
+
     public MeasurementSensorManager(SensorManager manager) {
         this.sensorManager = manager;
-
-        this.sensorManager = manager;
+        this.values = new ArrayList<>();
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
         gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
@@ -23,9 +27,8 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if(event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            double sides = event.values[0];
-            double upDown = event.values[1];
+        if(event.sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
+            values.add(new Dimensions(event.values[0], event.values[1], event.values[2], event.timestamp));
         }
 
         if(event.sensor.getType() == Sensor.TYPE_GYROSCOPE) {
