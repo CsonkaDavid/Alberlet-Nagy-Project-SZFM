@@ -55,4 +55,8 @@ public class MeasurementSensorManager implements SensorEventListener {
                 SensorManager.SENSOR_DELAY_FASTEST,
                 SensorManager.SENSOR_DELAY_FASTEST);
     }
+
+    public void unregisterListeners() {
+        sensorManager.unregisterListener(this);
+    }
 }
