@@ -8,15 +8,22 @@ import android.hardware.SensorManager;
 public class MeasurementSensorManager implements SensorEventListener {
     private SensorManager sensorManager;
 
+    private final Sensor accelerometer;
+
+    private final Sensor gyroscope;
+
     public MeasurementSensorManager(SensorManager manager) {
         this.sensorManager = manager;
-        Sensor accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
+        this.sensorManager = manager;
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+        gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+
         sensorManager.registerListener(
                 this,
                 accelerometer,
                 SensorManager.SENSOR_DELAY_FASTEST);
 
-        Sensor gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         sensorManager.registerListener(
                 this,
                 gyroscope,
