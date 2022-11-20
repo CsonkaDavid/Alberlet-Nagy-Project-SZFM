@@ -41,10 +41,6 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     }
 
-    public void setSensorManager(SensorManager sensorManager) {
-        this.sensorManager = sensorManager;
-    }
-
     public void registerListeners() {
         sensorManager.registerListener(
                 this,
