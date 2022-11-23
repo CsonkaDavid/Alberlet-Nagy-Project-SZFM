@@ -21,6 +21,18 @@ public class Dimensions {
         this.timestamp-=correction;
     }
 
+    public float getAxisWithIndex(int index) {
+        switch (index) {
+            case 0:
+                return getX();
+            case 1:
+                return getY();
+            case 2:
+                return getZ();
+        }
+        return 0;
+    }
+
     public float getX() {
         return x;
     }
