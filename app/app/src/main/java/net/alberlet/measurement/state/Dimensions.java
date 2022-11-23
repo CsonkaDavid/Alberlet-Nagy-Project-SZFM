@@ -8,13 +8,17 @@ public class Dimensions {
 
     private final float z;
 
-    private final long timestamp;
+    private long timestamp;
 
     public Dimensions(float x, float y, float z, long timestamp) {
         this.x = x;
         this.y = y;
         this.z = z;
         this.timestamp = timestamp;
+    }
+
+    public void correctTimestamp(float correction){
+        this.timestamp-=correction;
     }
 
     public float getX() {
