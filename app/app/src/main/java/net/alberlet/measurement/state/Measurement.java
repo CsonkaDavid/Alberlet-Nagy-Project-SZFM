@@ -8,22 +8,27 @@ public class Measurement {
 
     private float result;
 
+    private int axisUsedIndex;
+
     public Measurement(List<Dimensions> measurements) {
         this.measurements = measurements;
+        result = 0;
     }
 
     public void calculateResultFromMeasurements() {
         correctMeasurementTimestamps();
+        axisUsedForMeasuring();
+
         long measuringTime = measurements.get(measurements.size()-1).getTimestamp();
 
     }
 
-    private int axisUsedForMeasuring(){
+    private void axisUsedForMeasuring(){
         int[] axes = new int[3];
         for(Dimensions dimensions: measurements) {
             axes[indexOfGreatestOfThreeNumbers(dimensions.getX(), dimensions.getY(), dimensions.getZ())]++;
         }
-        return indexOfGreatestOfThreeNumbers(axes[0], axes[1], axes[2]);
+        axisUsedIndex = indexOfGreatestOfThreeNumbers(axes[0], axes[1], axes[2]);
     }
 
     private void correctMeasurementTimestamps() {
@@ -47,4 +52,7 @@ public class Measurement {
         }
     }
 
+    public float getResult() {
+        return result;
+    }
 }

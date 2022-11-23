@@ -55,7 +55,10 @@ public class MeasurementSensorManager implements SensorEventListener {
                 SensorManager.SENSOR_DELAY_FASTEST);
     }
 
-    public void unregisterListeners() {
+    public float unregisterListenersAndGetResult() {
         sensorManager.unregisterListener(this);
+        Measurement measurement = new Measurement(values);
+        measurement.calculateResultFromMeasurements();
+        return measurement.getResult();
     }
 }

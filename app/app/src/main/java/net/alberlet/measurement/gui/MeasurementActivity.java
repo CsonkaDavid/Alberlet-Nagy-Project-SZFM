@@ -28,6 +28,7 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
         sensorManager = new MeasurementSensorManager((SensorManager)getSystemService(SENSOR_SERVICE));
         measurementButton = findViewById(R.id.button_toggle_measurement);
         measurementTextView = findViewById(R.id.text_view_measurement);
+        measurementTextView.setText("0 cm");
         isMeasuring = false;
     }
 
@@ -49,9 +50,10 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
 
     private void stopMeasuring() {
         isMeasuring = false;
-        sensorManager.unregisterListeners();
+        float result = sensorManager.unregisterListenersAndGetResult();
         measurementButton.setText("Indítás");
         measurementButton.setBackgroundResource(R.drawable.measurement_button_background);
+        measurementTextView.setText(result + " cm");
     }
 
 }
