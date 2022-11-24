@@ -1,25 +1,30 @@
 package net.alberlet.measurement.state;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Measurement {
 
     private final List<Dimensions> measurements;
 
-    private float result;
+    private final List<Long> measurementWeights;
+
+    private long sumOfMeasurementWeights;
 
     private int axisUsedIndex;
 
+    private float result;
+
     public Measurement(List<Dimensions> measurements) {
         this.measurements = measurements;
+        this.measurementWeights = new ArrayList<>();
         result = 0;
     }
 
     public void calculateResultFromMeasurements() {
-        correctMeasurementTimestamps();
+        processMeasurementTimestamps();
         axisUsedForMeasuring();
 
-        long measuringTime = measurements.get(measurements.size()-1).getTimestamp();
 
     }
 
@@ -31,24 +36,33 @@ public class Measurement {
         axisUsedIndex = indexOfGreatestOfThreeNumbers(axes[0], axes[1], axes[2]);
     }
 
-    private void correctMeasurementTimestamps() {
+    private void processMeasurementTimestamps() {
         long firstTimestamp = measurements.get(0).getTimestamp();
+        long prevTimestamp = 0;
         for(Dimensions dimensions: measurements) {
+            long thisTimestamp = dimensions.getTimestamp();
+            long timeElapsed = thisTimestamp - prevTimestamp;
             dimensions.correctTimestamp(firstTimestamp);
+            sumOfMeasurementWeights+=timeElapsed;
+            measurementWeights.add(timeElapsed);
+            prevTimestamp = thisTimestamp;
         }
     }
 
     private int indexOfGreatestOfThreeNumbers(float a, float b, float c) {
-        if(a > b){
-            if(a > c) {
-                return 1;
+        float abs_a = Math.abs(a);
+        float abs_b = Math.abs(b);
+        float abs_c = Math.abs(c);
+        if(abs_a > abs_b){
+            if(abs_a > abs_c) {
+                return 0;
             } else {
-                return 3;
+                return 2;
             }
-        } else if (b > c) {
-            return 2;
+        } else if (abs_b > abs_c) {
+            return 1;
         } else {
-            return 3;
+            return 2;
         }
     }
 
