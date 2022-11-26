@@ -24,7 +24,9 @@ public class Measurement {
     public void calculateResultFromMeasurements() {
         processMeasurementTimestamps();
         axisUsedForMeasuring();
-        
+        float acceleration = Math.abs(calculateAverageSpeed());
+        float time = ((float) measurements.get(measurements.size()-1).getTimestamp() / (float) Math.pow(10, 9));
+        result = (acceleration * (float)Math.pow(time, 2));
     }
 
     private void axisUsedForMeasuring(){
