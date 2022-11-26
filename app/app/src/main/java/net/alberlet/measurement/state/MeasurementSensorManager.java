@@ -57,9 +57,9 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     public float unregisterListenersAndGetResult() {
         sensorManager.unregisterListener(this);
-        Measurement measurement = new Measurement(values);
-        measurement.calculateResultFromMeasurements();
+        Measurer measurer = new Measurer(values);
+        measurer.calculateResultFromMeasurements();
         values = new ArrayList<>();
-        return measurement.getResult();
+        return measurer.getResult();
     }
 }

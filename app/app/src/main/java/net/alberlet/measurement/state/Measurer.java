@@ -3,7 +3,7 @@ package net.alberlet.measurement.state;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Measurement {
+public class Measurer {
 
     private final List<AccelerationData> measurements;
 
@@ -15,7 +15,7 @@ public class Measurement {
 
     private float result;
 
-    public Measurement(List<AccelerationData> measurements) {
+    public Measurer(List<AccelerationData> measurements) {
         this.measurements = measurements;
         this.measurementWeights = new ArrayList<>();
         result = 0;
