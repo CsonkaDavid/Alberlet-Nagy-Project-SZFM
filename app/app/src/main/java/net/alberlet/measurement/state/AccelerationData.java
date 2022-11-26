@@ -1,6 +1,6 @@
 package net.alberlet.measurement.state;
 
-public class Dimensions {
+public class AccelerationData {
 
     private final float x;
 
@@ -10,7 +10,7 @@ public class Dimensions {
 
     private long timestamp;
 
-    public Dimensions(float x, float y, float z, long timestamp) {
+    public AccelerationData(float x, float y, float z, long timestamp) {
         this.x = x;
         this.y = y;
         this.z = z;

@@ -15,7 +15,7 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     private final Sensor gyroscope;
 
-    private List<Dimensions> values;
+    private List<AccelerationData> values;
 
     public MeasurementSensorManager(SensorManager manager) {
         this.sensorManager = manager;
@@ -28,7 +28,7 @@ public class MeasurementSensorManager implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         if(event.sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
-            values.add(new Dimensions(event.values[0], event.values[1], event.values[2], event.timestamp));
+            values.add(new AccelerationData(event.values[0], event.values[1], event.values[2], event.timestamp));
         }
 
         if(event.sensor.getType() == Sensor.TYPE_GYROSCOPE) {

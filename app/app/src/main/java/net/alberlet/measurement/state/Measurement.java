@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Measurement {
 
-    private final List<Dimensions> measurements;
+    private final List<AccelerationData> measurements;
 
     private final List<Long> measurementWeights;
 
     private long sumOfMeasurementWeights;
 
-    private int axisUsedIndex;
+    private int indexOfUsedAxis;
 
     private float result;
 
-    public Measurement(List<Dimensions> measurements) {
+    public Measurement(List<AccelerationData> measurements) {
         this.measurements = measurements;
         this.measurementWeights = new ArrayList<>();
         result = 0;
@@ -32,16 +32,16 @@ public class Measurement {
 
     private void axisUsedForMeasuring(){
         int[] axes = new int[3];
-        for(Dimensions dimensions: measurements) {
+        for(AccelerationData dimensions: measurements) {
             axes[indexOfGreatestOfThreeNumbers(dimensions.getX(), dimensions.getY(), dimensions.getZ())]++;
         }
-        axisUsedIndex = indexOfGreatestOfThreeNumbers(axes[0], axes[1], axes[2]);
+        indexOfUsedAxis = indexOfGreatestOfThreeNumbers(axes[0], axes[1], axes[2]);
     }
 
     private void processMeasurementTimestamps() {
         long firstTimestamp = measurements.get(0).getTimestamp();
         long prevTimestamp = 0;
-        for(Dimensions dimensions: measurements) {
+        for(AccelerationData dimensions: measurements) {
             long thisTimestamp = dimensions.getTimestamp();
             long timeElapsed = thisTimestamp - prevTimestamp;
             dimensions.correctTimestamp(firstTimestamp);
@@ -54,7 +54,7 @@ public class Measurement {
     private float calculateAverageSpeed() {
         float weightedArithmeticMean = 0;
         for(int i=0; i<measurements.size(); i++){
-            weightedArithmeticMean += measurements.get(i).getAxisWithIndex(axisUsedIndex) *
+            weightedArithmeticMean += measurements.get(i).getAxisWithIndex(indexOfUsedAxis) *
                     measurementWeights.get(i) / sumOfMeasurementWeights;
         }
         return weightedArithmeticMean;
