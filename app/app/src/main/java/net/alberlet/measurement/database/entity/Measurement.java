@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Measurement {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int id;
 
     public Measurement() {}
