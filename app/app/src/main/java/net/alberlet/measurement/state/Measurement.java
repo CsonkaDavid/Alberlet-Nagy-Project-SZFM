@@ -24,8 +24,7 @@ public class Measurement {
     public void calculateResultFromMeasurements() {
         processMeasurementTimestamps();
         axisUsedForMeasuring();
-
-
+        
     }
 
     private void axisUsedForMeasuring(){
@@ -43,10 +42,19 @@ public class Measurement {
             long thisTimestamp = dimensions.getTimestamp();
             long timeElapsed = thisTimestamp - prevTimestamp;
             dimensions.correctTimestamp(firstTimestamp);
-            sumOfMeasurementWeights+=timeElapsed;
+            sumOfMeasurementWeights += timeElapsed;
             measurementWeights.add(timeElapsed);
             prevTimestamp = thisTimestamp;
         }
+    }
+
+    private float calculateAverageSpeed() {
+        float weightedArithmeticMean = 0;
+        for(int i=0; i<measurements.size(); i++){
+            weightedArithmeticMean += measurements.get(i).getAxisWithIndex(axisUsedIndex) *
+                    measurementWeights.get(i) / sumOfMeasurementWeights;
+        }
+        return weightedArithmeticMean;
     }
 
     private int indexOfGreatestOfThreeNumbers(float a, float b, float c) {
