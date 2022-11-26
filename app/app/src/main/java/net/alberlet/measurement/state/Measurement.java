@@ -24,9 +24,10 @@ public class Measurement {
     public void calculateResultFromMeasurements() {
         processMeasurementTimestamps();
         axisUsedForMeasuring();
-        float acceleration = Math.abs(calculateAverageSpeed());
-        float time = ((float) measurements.get(measurements.size()-1).getTimestamp() / (float) Math.pow(10, 9));
-        result = (acceleration * (float)Math.pow(time, 2));
+        float accelerationInMeterPerSquareSecond = Math.abs(calculateAverageSpeed());
+        float timeInSeconds = ((float) measurements.get(measurements.size()-1).getTimestamp() / (float) Math.pow(10, 9));
+        float distanceInMeters = (accelerationInMeterPerSquareSecond * (float)Math.pow(timeInSeconds, 2));
+        result = distanceInMeters * 100;
     }
 
     private void axisUsedForMeasuring(){
