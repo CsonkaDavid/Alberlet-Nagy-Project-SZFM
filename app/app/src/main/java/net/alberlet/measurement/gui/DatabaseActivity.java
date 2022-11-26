@@ -23,7 +23,7 @@ public class DatabaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_database);
-        database = new MeasurementDatabase(this);
+        database = MeasurementDatabase.getInstance(this);
         measurementList = findViewById(R.id.dataBaseLayout);
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MeasurementDatabase {
     private AppDatabase database;
-    private MeasurementDatabase instance;
+    private static MeasurementDatabase instance;
 
     private MeasurementDatabase(){}
 
@@ -19,7 +19,7 @@ public class MeasurementDatabase {
                 AppDatabase.class, "MeasurementDatabase.db").allowMainThreadQueries().build();
     }
 
-    public MeasurementDatabase getInstance(Context context){
+    public static MeasurementDatabase getInstance(Context context){
         if(instance==null){
             instance = new MeasurementDatabase(context);
         }
