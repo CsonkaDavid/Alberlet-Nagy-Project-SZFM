@@ -15,7 +15,7 @@ public class MeasurementSensorManager implements SensorEventListener {
 
     private final Sensor gyroscope;
 
-    private final List<Dimensions> values;
+    private List<Dimensions> values;
 
     public MeasurementSensorManager(SensorManager manager) {
         this.sensorManager = manager;
@@ -59,6 +59,7 @@ public class MeasurementSensorManager implements SensorEventListener {
         sensorManager.unregisterListener(this);
         Measurement measurement = new Measurement(values);
         measurement.calculateResultFromMeasurements();
+        values = new ArrayList<>();
         return measurement.getResult();
     }
 }
