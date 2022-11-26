@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MeasurementDatabase {
     private AppDatabase database;
-    private static MeasurementDatabase instance;
+    private static MeasurementDatabase instance = null;
 
     private MeasurementDatabase(){}
 

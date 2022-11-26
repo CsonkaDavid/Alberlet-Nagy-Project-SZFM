@@ -9,7 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import net.alberlet.measurement.R;
+import net.alberlet.measurement.database.MeasurementDatabase;
 import net.alberlet.measurement.state.MeasurementSensorManager;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MeasurementActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -19,12 +23,18 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
 
     private TextView measurementTextView;
 
+    private MeasurementDatabase measurementDatabase;
+
+    private SimpleDateFormat simpleDateFormat;
+
     private boolean isMeasuring;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_measurement);
+        measurementDatabase = MeasurementDatabase.getInstance(this);
+        simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         sensorManager = new MeasurementSensorManager((SensorManager)getSystemService(SENSOR_SERVICE));
         measurementButton = findViewById(R.id.button_toggle_measurement);
         measurementTextView = findViewById(R.id.text_view_measurement);
@@ -54,6 +64,9 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
         measurementButton.setText("Indítás");
         measurementButton.setBackgroundResource(R.drawable.measurement_button_background);
         measurementTextView.setText(String.format("%.2f", result) + " cm");
+        Date date = new Date();
+        String formattedDate = simpleDateFormat.format(date);
+        measurementDatabase.insertMeasurement(formattedDate,result);
     }
 
 }
