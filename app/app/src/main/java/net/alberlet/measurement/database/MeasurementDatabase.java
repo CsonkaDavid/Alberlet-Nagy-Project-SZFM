@@ -1,6 +1,6 @@
 package net.alberlet.measurement.database;
 
-import android.app.Activity;
+import android.content.Context;
 
 import androidx.room.Room;
 
@@ -9,11 +9,21 @@ import net.alberlet.measurement.database.entity.Measurement;
 import java.util.List;
 
 public class MeasurementDatabase {
-    private final AppDatabase database;
+    private AppDatabase database;
+    private MeasurementDatabase instance;
 
-    public MeasurementDatabase(Activity activity) {
-        database = Room.databaseBuilder(activity.getApplicationContext(),
+    private MeasurementDatabase(){}
+
+    private MeasurementDatabase(Context context) {
+        database = Room.databaseBuilder(context.getApplicationContext(),
                 AppDatabase.class, "MeasurementDatabase.db").allowMainThreadQueries().build();
+    }
+
+    public MeasurementDatabase getInstance(Context context){
+        if(instance==null){
+            instance = new MeasurementDatabase(context);
+        }
+        return instance;
     }
 
     public List<Measurement> getMeasurements() {
@@ -25,4 +35,5 @@ public class MeasurementDatabase {
 
         database.measurementDao().insertNewMeasurement(measurement);
     }
+
 }
