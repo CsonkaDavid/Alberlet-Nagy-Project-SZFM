@@ -41,7 +41,7 @@ public class DatabaseActivity extends AppCompatActivity {
             TextView t1 = new TextView(this);
             TextView t2 = new TextView(this);
             t1.setText(measurement.date);
-            t2.setText(Double.toString(measurement.meter));
+            t2.setText(Double.toString(measurement.centimeter));
             t1.setTextColor(Color.WHITE);
             t2.setTextColor(Color.WHITE);
             t1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);

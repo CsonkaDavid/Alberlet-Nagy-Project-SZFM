@@ -11,14 +11,14 @@ public class Measurement {
 
     public Measurement() {}
 
-    public Measurement(String date, double meter) {
+    public Measurement(String date, double centimeter) {
         this.date = date;
-        this.meter = meter;
+        this.centimeter = centimeter;
     }
 
     @ColumnInfo(name = "date")
     public String date;
 
-    @ColumnInfo(name = "meter")
-    public double meter;
+    @ColumnInfo(name = "centimeter")
+    public double centimeter;
 }
