@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import net.alberlet.measurement.R;
 
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         MeasurementButton = findViewById(R.id.button_measurement);
         DatabaseButton = findViewById(R.id.button_database);
@@ -61,7 +64,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         finish();
         System.exit(0);
     }
-
-
 
 }

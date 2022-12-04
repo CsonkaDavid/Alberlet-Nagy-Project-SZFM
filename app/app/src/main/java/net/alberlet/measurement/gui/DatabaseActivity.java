@@ -1,8 +1,10 @@
 package net.alberlet.measurement.gui;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class DatabaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_database);
         database = MeasurementDatabase.getInstance(this);
         measurementList = findViewById(R.id.dataBaseLayout);
@@ -58,4 +61,5 @@ public class DatabaseActivity extends AppCompatActivity {
             measurementList.addView(linearLayout);
         }
     }
+
 }

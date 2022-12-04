@@ -1,8 +1,10 @@
 package net.alberlet.measurement.gui;
 
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +36,7 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_measurement);
         measurementDatabase = MeasurementDatabase.getInstance(this);
         simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
