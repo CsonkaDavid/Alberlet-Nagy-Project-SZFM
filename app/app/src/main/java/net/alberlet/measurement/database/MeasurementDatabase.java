@@ -16,7 +16,7 @@ public class MeasurementDatabase {
 
     private MeasurementDatabase(Context context) {
         database = Room.databaseBuilder(context.getApplicationContext(),
-                AppDatabase.class, "MeasurementDatabase.db").allowMainThreadQueries().build();
+                AppDatabase.class, "MeasurementDB.db").allowMainThreadQueries().build();
     }
 
     public static MeasurementDatabase getInstance(Context context){
