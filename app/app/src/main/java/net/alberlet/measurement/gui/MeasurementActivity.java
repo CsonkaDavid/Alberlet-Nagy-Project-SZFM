@@ -12,6 +12,8 @@ import net.alberlet.measurement.R;
 import net.alberlet.measurement.database.MeasurementDatabase;
 import net.alberlet.measurement.state.MeasurementSensorManager;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -38,7 +40,7 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
         sensorManager = new MeasurementSensorManager((SensorManager)getSystemService(SENSOR_SERVICE));
         measurementButton = findViewById(R.id.button_toggle_measurement);
         measurementTextView = findViewById(R.id.text_view_measurement);
-        measurementTextView.setText("0 m");
+        measurementTextView.setText("0 cm");
         isMeasuring = false;
     }
 
@@ -61,12 +63,13 @@ public class MeasurementActivity extends AppCompatActivity implements View.OnCli
     private void stopMeasuring() {
         isMeasuring = false;
         float result = sensorManager.unregisterListenersAndGetResult();
+        BigDecimal decimalResult = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP);
         measurementButton.setText("Indítás");
         measurementButton.setBackgroundResource(R.drawable.measurement_button_background);
-        measurementTextView.setText(String.format("%.2f", result) + " cm");
+        measurementTextView.setText(decimalResult.doubleValue() + " cm");
         Date date = new Date();
         String formattedDate = simpleDateFormat.format(date);
-        measurementDatabase.insertMeasurement(formattedDate,result);
+        measurementDatabase.insertMeasurement(formattedDate, decimalResult.doubleValue());
     }
 
 }
