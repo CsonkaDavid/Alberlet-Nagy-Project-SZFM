@@ -36,7 +36,7 @@ public class DatabaseActivity extends AppCompatActivity {
     private void fillScrollViewWithData() {
         List<Measurement> measurements = database.getMeasurements();
 
-        for (int i = 0; i < measurements.size(); i++) {
+        for (int i = measurements.size()-1; i >= 0; i--) {
             Measurement measurement = measurements.get(i);
             TextView t1 = new TextView(this);
             TextView t2 = new TextView(this);
